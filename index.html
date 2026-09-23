@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram Report</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      width: 90%;
+      max-width: 500px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 22px;
+      background: #4285f4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background: #3367d6;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Telegram Report</h1>
+
+  <p>
+    Click the button below to open Gmail with the Telegram report
+    recipient, subject, and message already filled in.
+  </p>
+
+  <a class="button" id="gmailButton" href="#">
+    Open Gmail Report
+  </a>
+</div>
+
+<script>
+const recipient = "abuse@telegram.org";
+
+const subject =
+"Notice of ToS violation: child safetyhttps://t.me/kalantari_afgan";
+
+const body = `To the Telegram Trust & Safety Team:
+
+We formally report the channel identified below for repeated publication of individuals' photographs, personal contact information, and abusive or sexually degrading captions.
+
+Target channel: @kalantari_afgan
+
+The following public posts contain photographs of individuals accompanied by their phone numbers or other identifying information, as well as insulting and sexually degrading descriptions written about the people shown:
+
+[FINDING 1] Publication of individuals' photographs and personal information
+Policy category: publishing private personal data without consent / harassment
+Why it may violate the rules: The posts appear to publish identifiable individuals' photographs together with their phone numbers or other identifying information, exposing them to unwanted contact, harassment, or misuse of their personal information.
+
+Proof:
+https://t.me/kalantari_afgan/874
+https://t.me/kalantari_afgan/876
+https://t.me/kalantari_afgan/878
+https://t.me/kalantari_afgan/879
+https://t.me/kalantari_afgan/885
+https://t.me/kalantari_afgan/887
+https://t.me/kalantari_afgan/897
+https://t.me/kalantari_afgan/900
+https://t.me/kalantari_afgan/901
+https://t.me/kalantari_afgan/907
+https://t.me/kalantari_afgan/918
+https://t.me/kalantari_afgan/937
+https://t.me/kalantari_afgan/964
+
+[FINDING 2] Abusive and sexually degrading descriptions of identifiable individuals
+Policy category: targeted harassment / abusive content
+Why it may violate the rules: The photographs are accompanied by derogatory and sexually degrading labels or descriptions directed at the people depicted, including language referring to prostitution or sexual misconduct.
+
+Proof:
+https://t.me/kalantari_afgan/874
+https://t.me/kalantari_afgan/876
+https://t.me/kalantari_afgan/878
+https://t.me/kalantari_afgan/879
+https://t.me/kalantari_afgan/885
+https://t.me/kalantari_afgan/887
+https://t.me/kalantari_afgan/897
+https://t.me/kalantari_afgan/900
+https://t.me/kalantari_afgan/901
+https://t.me/kalantari_afgan/907
+https://t.me/kalantari_afgan/918
+https://t.me/kalantari_afgan/937
+https://t.me/kalantari_afgan/964
+
+We respectfully request that Telegram review the cited posts and the channel as a whole for potential violations involving the publication of personal information, targeted harassment, and abusive or sexually degrading content.
+
+At minimum, the cited material should be reviewed and appropriate action should be taken if it is found to violate Telegram's Terms of Service or applicable policies.
+
+Respectfully,`;
+
+const gmailUrl =
+  "https://mail.google.com/mail/?view=cm&fs=1" +
+  "&to=" + encodeURIComponent(recipient) +
+  "&su=" + encodeURIComponent(subject) +
+  "&body=" + encodeURIComponent(body);
+
+document.getElementById("gmailButton").href = gmailUrl;
+</script>
+
+</body>
+</html>
